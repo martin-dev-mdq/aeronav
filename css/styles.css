@@ -9,8 +9,7 @@ body {
 
 /* Navbar flotante dentro del hero */
 header.navbar {
-  
-    background: rgba(255, 255, 255); /* blanco semi-transparente */
+    background: rgba(255, 255, 255); 
     margin-top: 20px; /* espacio arriba */
     margin-left: 50px; /* espacio a la izquierda para determinar el ancho del navbar*/
     margin-right: 50px; /* espacio a la derecha para determinar el ancho del navbar*/
@@ -95,12 +94,14 @@ header .container {
     letter-spacing: 1px;
     text-transform: uppercase;
     color: #fff;
+    text-shadow: #333 0px 0px 5px; /* Sombra de texto */
 }
 
 /* Título principal */
 .hero h1 {
     font-weight: 600;
     margin-top: 20px;
+    text-shadow: #333 0px 0px 5px; /* Sombra de texto */
 }
 
 /* Estilo para los botones del hero */
@@ -204,4 +205,113 @@ section {
     text-align: center;
     width: 100%;
 }
+
+/* Servicios */
+
+.servicios {
+    background-color: #fff; /* Fondo blanco */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.servicios-up {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.servicios-med {
+    width: 90%;
+    height: 40vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    flex-wrap: wrap; /* Permitir que los elementos se ajusten en pantallas pequeñas */
+   
+}
+
+.servicios-down {
+    width: 90%;
+    height: 40vh;
+    height: auto;
+    display: flex;
+    justify-content: space-evenly;
+    
+}
+
+.servicios-down-img {
+    width: 50%;
+    height: auto;
+    background-size:auto 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+   
+       
+}
+
+
+.servicios-div {
+    background-color: #d5d5d5; /* Fondo gris claro */
+    height: 25vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    
+}
+
+.servicios-div h4 {
+    font-size: 1.2rem; /* Tamaño del texto */
+    text-align: center;
+    font-weight: 400;
+}
+
+/* Ajustes responsivos */
+@media (max-width: 768px) {
+    header.navbar {
+        margin: 0; /* Elimina márgenes solo en mobile */
+        border-radius: 0; /* Quita los bordes redondeados solo en mobile */
+        width: 100%; /* Asegura que ocupe todo el ancho */
+        height: 60px;
+
+    }
+
+    .navbar-brand img {
+        height: 50px;
+    }
+
+    .navbar-nav .nav-link {
+        height: auto;
+        padding: 10px 20px;
+    }
+
+    .hero-content {
+        margin-top: 80px;
+    }
+
+    .nosotros-section {
+        padding: 40px 10px;
+    }
+
+    /* Fondo blanco en el menú hamburguesa abierto */
+    .navbar-collapse {
+        background-color: #ffffff;
+    }
+
+    .servicios-med {
+        flex-direction: column; /* Cambia a columna en pantallas pequeñas */
+        align-items: center; /* Centra los elementos */
+        height: auto;
+        gap: 20px;
+    }
+}
+
 
