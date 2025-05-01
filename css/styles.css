@@ -7,12 +7,16 @@ body {
     box-sizing: border-box;
 }
 
+h2 {
+    margin-bottom: 30px;
+}
+
 /* Navbar flotante dentro del hero */
 header.navbar {
     background: rgba(255, 255, 255); 
     margin-top: 20px; /* espacio arriba */
-    margin-left: 50px; /* espacio a la izquierda para determinar el ancho del navbar*/
-    margin-right: 50px; /* espacio a la derecha para determinar el ancho del navbar*/
+    margin-left: 70px; /* espacio a la izquierda para determinar el ancho del navbar*/
+    margin-right: 70px; /* espacio a la derecha para determinar el ancho del navbar*/
     padding: 0; /* quitamos padding extra */
     height: 70px; /* controlamos altura */
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
@@ -28,6 +32,13 @@ header .container {
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+
+/* Distribución de los botones del header */
+
+.header-btns {
+    height: 100px;
+    padding-top: 50px;
 }
 
 /* Imagen logo */
@@ -127,7 +138,6 @@ section {
 /* Nosotros */
 #nosotros {
     background-color: #32AFC8;
-    
     padding: 0;
     display: flex;
     flex-direction: column;
@@ -204,6 +214,24 @@ section {
     font-size: 1.2rem; /* Tamaño del texto */
     text-align: center;
     width: 100%;
+}
+
+.section-up {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    padding-top:50px;
+    gap: 20px;
+    height: 50%;
+}
+
+.section-down {
+    display: flex;
+    flex-direction: column;
+   
+    justify-content: center;
+    height: 50%;
 }
 
 /* Servicios */
@@ -315,3 +343,27 @@ section {
 }
 
 
+/******* PRODCUTOS ********/
+
+.productos {
+    display: flex;
+    flex-direction: column;
+    height: 80vh;
+    align-items: center;
+ 
+    background-size: cover;
+    background-position: center;
+}
+
+.productos h2 {
+    color: #fff;
+    
+    
+}
+
+.productos p {
+    color: #fff;
+    padding-left:200px;
+    padding-right: 200px;
+    text-align: center;
+}
