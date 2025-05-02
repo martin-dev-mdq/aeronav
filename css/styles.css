@@ -5,10 +5,12 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-weight: 300;
 }
 
 h2 {
     margin-bottom: 30px;
+    
 }
 
 /* Navbar flotante dentro del hero */
@@ -24,6 +26,7 @@ header.navbar {
     top: 0;
     left: 0;
     right: 0;
+    z-index: 10;
 }
 
 /* Alineación del contenido del navbar */
@@ -189,6 +192,10 @@ section {
 
 .nosotros-down {
     display: flex;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -197,16 +204,31 @@ section {
     overflow: hidden;
 }
     
-
+/* MISNION - VISION - VALOR */
 .nosotros-section {
-   height: 70vh;
+   height: 80vh;
    display: flex;
    flex-direction: column;
    justify-content: center;
    gap: 20px;
    padding: 40px;
    align-items: center;
-   background-size: cover;
+
+}
+
+.orange {
+    background-color: rgba(255, 175, 50, 0.9);
+
+}
+
+.skyblue {
+    background-color: rgba(50, 175, 200, 0.9);
+    
+}
+
+.gray   {
+    background-color: rgba(128, 128, 128, 0.9);
+
 }
 
 #nosotros .nosotros-section p {
@@ -214,6 +236,7 @@ section {
     font-size: 1.2rem; /* Tamaño del texto */
     text-align: center;
     width: 100%;
+    
 }
 
 .section-up {
@@ -224,12 +247,12 @@ section {
     padding-top:50px;
     gap: 20px;
     height: 50%;
+    
 }
 
 .section-down {
     display: flex;
     flex-direction: column;
-   
     justify-content: center;
     height: 50%;
 }
@@ -286,7 +309,7 @@ section {
 
 
 .servicios-div {
-    background-color: #d5d5d5; /* Fondo gris claro */
+    background-color: #f4f4f4; /* Fondo gris claro */
     height: 25vh;
     display: flex;
     flex-direction: column;
@@ -296,52 +319,17 @@ section {
     
 }
 
+.servicios-div:hover {
+    background-color: #32AFC8;
+    transition: background 0.3s, color 0.3s;
+    
+}
+
 .servicios-div h4 {
     font-size: 1.2rem; /* Tamaño del texto */
     text-align: center;
     font-weight: 400;
 }
-
-/* Ajustes responsivos */
-@media (max-width: 768px) {
-    header.navbar {
-        margin: 0; /* Elimina márgenes solo en mobile */
-        border-radius: 0; /* Quita los bordes redondeados solo en mobile */
-        width: 100%; /* Asegura que ocupe todo el ancho */
-        height: 60px;
-
-    }
-
-    .navbar-brand img {
-        height: 50px;
-    }
-
-    .navbar-nav .nav-link {
-        height: auto;
-        padding: 10px 20px;
-    }
-
-    .hero-content {
-        margin-top: 80px;
-    }
-
-    .nosotros-section {
-        padding: 40px 10px;
-    }
-
-    /* Fondo blanco en el menú hamburguesa abierto */
-    .navbar-collapse {
-        background-color: #ffffff;
-    }
-
-    .servicios-med {
-        flex-direction: column; /* Cambia a columna en pantallas pequeñas */
-        align-items: center; /* Centra los elementos */
-        height: auto;
-        gap: 20px;
-    }
-}
-
 
 /******* PRODCUTOS ********/
 
@@ -367,3 +355,141 @@ section {
     padding-right: 200px;
     text-align: center;
 }
+
+/* Carousell de imágenes */
+.contenedor-imagenes {
+    overflow-x: hidden; /* Oculta el scroll horizontal */
+    white-space: nowrap; /* Evita que las imágenes se envuelvan */
+    position: relative;
+}
+
+.contenedor-imagenes img {
+    display: inline-block; /* Permite que las imágenes se muestren una al lado de la otra */
+    max-width: none; /* Evita que Bootstrap limite el ancho de las imágenes */
+    height: auto; /* Mantiene la proporción de las imágenes */
+    margin-right: 10px; /* Espacio entre imágenes */
+    width: 100%;
+    max-width: 300px;
+}
+
+
+/* Ajustes responsivos */
+
+@media (max-width: 576px) {
+    /* Header */
+    header.navbar {
+        background: rgba(255, 255, 255); 
+        margin: 0;
+        max-width: 100vw;
+        padding: 0; /* quitamos padding extra */
+        height: 70px; /* controlamos altura */
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        position: fixed; /* fijamos el navbar */
+        
+        z-index: 10;
+    }
+
+    /* Fondo blanco en el menú hamburguesa abierto */
+    .navbar-collapse {
+        background-color: #ffffff;
+    }
+
+    .nosotros {
+        height: auto;
+        padding-top: 30px ;
+        padding-bottom: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+    } 
+    
+    .nosotros p {
+       
+        width: 80vw !important;
+        
+    }
+
+    /*** SERVICIOS ***/
+
+    .servicios {
+        background-color: #fff; /* Fondo blanco */
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
+    
+    .servicios-up {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .servicios-med {
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px;
+        flex-wrap: wrap; /* Permitir que los elementos se ajusten en pantallas pequeñas */
+       
+    }
+    
+    .servicios-down {
+        width: 90%;
+        height:auto;
+        
+        
+    }
+    
+    .servicios-down-img {
+        width: 100%;
+        height: auto;
+        background-size:auto 100%;
+        background-repeat: no-repeat;
+        background-position: center;
+       
+           
+    }
+    
+    
+    .servicios-div {
+        background-color: #f4f4f4; /* Fondo gris claro */
+        height: 25vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 25px;
+        
+    }
+    
+    .servicios-div h4 {
+        font-size: 1.2rem; /* Tamaño del texto */
+        text-align: center;
+        font-weight: .00;
+    }
+
+
+    /** PRODUCTOS **/
+
+    .productos {
+        height: auto;
+       
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
+    .productos p {
+        padding: 15px;
+    }
+
+}
+
