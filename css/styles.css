@@ -8,6 +8,17 @@ body {
     font-weight: 300;
 }
 
+/* Ajusta el valor de las secciones con respecto al navbar */
+#home,
+#nosotros,
+#servicios,
+#productos,
+#logistica,
+#contact-us {
+    scroll-margin-top: 70px; 
+}
+
+
 h2 {
     margin-bottom: 30px;
 
@@ -480,7 +491,7 @@ section {
     background-color: #fff;
     padding: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-   
+
 
 
 }
@@ -720,7 +731,7 @@ footer .back-to-top i {
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        gap:10px
+        gap: 10px
     }
 
     .nosotros {
@@ -785,13 +796,20 @@ footer .back-to-top i {
     }
 
     .servicios-down {
+        padding-top: 30px;
         width: 100%;
         height: auto;
         display: flex;
-        flex-direction: column;
-        /* Cambiado a columna para apilar en móviles */
+        text-align: center;
 
     }
+
+    .servicios-down h4 {
+        margin-bottom: 30px;
+
+    }
+        
+
 
     .servicios-down-img {
         width: 100%;
@@ -834,114 +852,114 @@ footer .back-to-top i {
 
     /** LOGISTICA **/
 
-.logistica {
-    display: flex;
-    width: 100vw;
-    flex-direction: column;
-    align-items: center;
-    overflow: hidden;
-    height: auto;
-    background-color: #f4f4f4;
-    overflow: hidden;
-    padding:0;
-    padding-top: 30px;
-    
-   
+    .logistica {
+        display: flex;
+        width: 100vw;
+        flex-direction: column;
+        align-items: center;
+        overflow: hidden;
+        height: auto;
+        background-color: #f4f4f4;
+        overflow: hidden;
+        padding: 0;
+        padding-top: 30px;
 
-}
 
-.logistica p {
-    padding: 0;
-    
-}
 
-.logistica-titulo {
-    text-align: center;
-    padding: 15px;
-    
-}
+    }
 
-.logistica-titulo p {
-    margin: 0
-}
+    .logistica p {
+        padding: 0;
 
-.logistica-secciones {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    width: 100vw;
-    padding: 0;
-   
+    }
 
-}
+    .logistica-titulo {
+        text-align: center;
+        padding: 15px;
 
-.items-container {
-    width: 100vw;
-    align-items: center;
+    }
 
-}
+    .logistica-titulo p {
+        margin: 0
+    }
 
-.logistica-items {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 100vw;
-    background-color: #fff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
+    .logistica-secciones {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        width: 100vw;
+        padding: 0;
 
-.items-container-rigth {
-    width: 100vw;
-}
 
-.container-rigth-texto {
-    height:auto;
-    margin-bottom: 0;
-    transform: translateY(0px);
-}
+    }
 
-/***** CONTACTO ****/
+    .items-container {
+        width: 100vw;
+        align-items: center;
 
-#contact-us {
-    padding-top: 0;
-    padding-bottom: 0;
-    
-    height: auto;
-}
+    }
 
-.contact-img {
-    padding-top: 30px;
-    padding-bottom: 30px;
-    
+    .logistica-items {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100vw;
+        background-color: #fff;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
 
-}
+    .items-container-rigth {
+        width: 100vw;
+    }
 
-.contact-img img {
-    height: min-content;
-}
+    .container-rigth-texto {
+        height: auto;
+        margin-bottom: 0;
+        transform: translateY(0px);
+    }
 
-/***** FOOTER *****/
+    /***** CONTACTO ****/
 
-footer {
-    height: auto;
-    padding-top: 30px;
-    padding-bottom: 30px;
-}
+    #contact-us {
+        padding-top: 0;
+        padding-bottom: 0;
 
-footer p {
-    padding: 0;
-}
+        height: auto;
+    }
 
-footer .social-icons {
-    padding: 15px;
-    
-}
+    .contact-img {
+        padding-top: 30px;
+        padding-bottom: 30px;
 
-footer .back-to-top a {
-    padding: 15px;
- 
-    
-}
+
+    }
+
+    .contact-img img {
+        height: min-content;
+    }
+
+    /***** FOOTER *****/
+
+    footer {
+        height: auto;
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
+    footer p {
+        padding: 0;
+    }
+
+    footer .social-icons {
+        padding: 15px;
+
+    }
+
+    footer .back-to-top a {
+        padding: 15px;
+
+
+    }
 
 }
