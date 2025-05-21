@@ -67,3 +67,22 @@ window.onload = () => {
     duplicarImagenes(); // Duplica las imágenes al cargar la página
     iniciarScroll(); // Inicia el scroll automático
 };
+
+
+// Carrusel de fondo para el hero
+document.addEventListener("DOMContentLoaded", function () {
+    const hero = document.querySelector('.hero');
+    const imagenes = [
+        "images/female-mechanic-holding-spare-parts.jpg",
+        "images/hero2.jpg",
+        "images/container-operation-port-series.jpg",
+        "images/hero4.jpg"
+    ];
+    let indice = 0;
+
+    setInterval(() => {
+        indice = (indice + 1) % imagenes.length;
+        hero.style.backgroundImage = `url('${imagenes[indice]}')`;
+        hero.style.transition = "background-image 1s linear";
+    }, 4000); // Cambia cada 4 segundos
+});
