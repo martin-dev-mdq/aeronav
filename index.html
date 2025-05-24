@@ -4,16 +4,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AERONAV - Compras Industriales</title>
+
+    <title>AERONAV - Compras Industriales en Argentina | Broker de Insumos y Repuestos</title>
+
+    <!-- SEO Básico -->
+    <meta name="description"
+        content="Aeronav es tu socio estratégico en compras industriales. Gestionamos insumos, repuestos y logística para sectores como aeronáutica, minería, petróleo, y más.">
+    <meta name="keywords"
+        content="compras industriales, broker de compras, insumos industriales, repuestos, Aeronav, logística industrial, CABA, abastecimiento industrial">
+    <meta name="author" content="Aeronav">
+    <link rel="canonical" href="https://www.aeronav.com.ar/">
+
+    <!-- Open Graph (útil para WhatsApp, LinkedIn, etc.) -->
+    <meta property="og:title" content="Aeronav - Compras Industriales y Logística Estratégica">
+    <meta property="og:description"
+        content="Desde el interior al mundo, nosotros lo conseguimos por vos. Gestionamos repuestos, insumos y materiales técnicos para industrias estratégicas.">
+    <meta property="og:image" content="https://www.aeronav.com.ar/images/AERONAV_Logotipo_turquesa.png">
+    <meta property="og:image:alt" content="Aeronav - Compras Industriales">F
+    <meta property="og:url" content="https://www.aeronav.com.ar/">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Aeronav">
+    <meta property="og:locale" content="es_AR">
+
+    <!-- Instagram link as part of identity -->
+    <meta property="business:contact_data:instagram" content="https://www.instagram.com/aeronavbroker/">
+    <meta name="instagram:username" content="aeronavbroker">
+
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon.png" type="image/png">
+
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Bootstrap Icons -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
-    <!-- Favicon -->
-    <link rel="icon" href="images/favicon.png" type="favicon">
     <!-- Estilos personalizados -->
     <link rel="stylesheet" href="css/styles.css">
 </head>
+
+
 
 <body>
 
@@ -66,8 +94,7 @@
                 <a href="#contacto" class="btn me-2 btn-nosotros">TU SOCIO ESTRATÉGICO</a>
             </div>
         </div>
-        <div class="container-fluid nosotros-down"
-            style="background-image: url('images/bg.jpg')">
+        <div class="container-fluid nosotros-down" style="background-image: url('images/bg.jpg')">
             <div class="row">
                 <!-- Misión -->
                 <div class="col-12 col-sm-4 text-center nosotros-section orange">
@@ -257,7 +284,7 @@
             </div>
             <div class="row">
                 <div class="col-md-6">
-                    <form class="contact" action="#" method="post">
+                    <form class="contact" action="php/enviar-formulario.php" method="post">
                         <div class="row">
                             <div class="col-md-6">
                                 <fieldset>
@@ -307,16 +334,49 @@
         </div>
     </section>
 
+    <!-- Modal de agradecimiento -->
+    <div class="modal fade" id="modalGracias" tabindex="-1" aria-labelledby="modalGraciasLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content text-center">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalGraciasLabel">¡Gracias por contactarnos!</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Tu mensaje fue enviado correctamente. Nos pondremos en contacto a la brevedad.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de error -->
+    <div class="modal fade" id="modalError" tabindex="-1" aria-labelledby="modalErrorLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content text-center">
+                <div class="modal-header bg-danger text-white">
+                    <h5 class="modal-title" id="modalErrorLabel">Error al enviar</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                        aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+                    <p>No pudimos enviar tu mensaje. Por favor, intentá nuevamente más tarde.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <footer>
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-4 col-12 footer-section">
                     <p>AERONAV.COM.AR<br>
-                    Copyright &copy; 2025 Aeronav<br>
+                        Copyright &copy; 2025 Aeronav<br>
                         Design: FFS+MR</p>
                 </div>
                 <div class="col-md-6 col-12 footer-section">
-                    <p>Seguinos en instagram como <a href="https://www.instagram.com/aeronavbroker?igsh=dzhhZDc0bHltbzFq" target="_blank">@aeronavbroker</a></p>
+                    <p>Seguinos en instagram como <a
+                            href="https://www.instagram.com/aeronavbroker?igsh=dzhhZDc0bHltbzFq"
+                            target="_blank">@aeronavbroker</a></p>
                 </div>
                 <div class="col-md-2 col-12 footer-section2 logo-footer">
                     <a href="#home">
@@ -326,6 +386,8 @@
             </div>
         </div>
     </footer>
+
+
 
 
     <!-- Bootstrap JS -->

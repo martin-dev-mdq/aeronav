@@ -964,7 +964,8 @@ footer a:hover {
     }
     
     .footer-section2 img {
-        width: 150px;
+        height: 80px;
+        padding: 10px;
     }
 }
     

@@ -86,3 +86,37 @@ document.addEventListener("DOMContentLoaded", function () {
         hero.style.transition = "background-image 1s linear";
     }, 4000); // Cambia cada 4 segundos
 });
+
+
+// Envio de formulario de contacto -   AGRADECIMIENTO / ERROR DE ENVIO
+
+document.querySelector("form.contact").addEventListener("submit", function(e) {
+  e.preventDefault(); // Evita el envío tradicional del formulario
+
+  const form = e.target;
+  const formData = new FormData(form);
+
+  fetch("php/enviar-formulario.php", {
+    method: "POST",
+    body: formData
+  })
+  .then(response => response.text())
+  .then(result => {
+    if (result.trim() === "ok") {
+      // Si el mensaje se envió correctamente
+      form.reset(); // Limpia el formulario
+      const modal = new bootstrap.Modal(document.getElementById('modalGracias'));
+      modal.show();
+    } else {
+      // Si hubo un error en el envío del mensaje
+      const errorModal = new bootstrap.Modal(document.getElementById('modalError'));
+      errorModal.show();
+    }
+  })
+  .catch(error => {
+    // Si hubo un error inesperado al hacer la solicitud
+    const errorModal = new bootstrap.Modal(document.getElementById('modalError'));
+    errorModal.show();
+    console.error("Error al enviar el formulario:", error);
+  });
+});
