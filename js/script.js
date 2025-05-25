@@ -68,7 +68,6 @@ window.onload = () => {
     iniciarScroll(); // Inicia el scroll automático
 };
 
-
 // Carrusel de fondo para el hero
 document.addEventListener("DOMContentLoaded", function () {
     const hero = document.querySelector('.hero');
@@ -86,7 +85,6 @@ document.addEventListener("DOMContentLoaded", function () {
         hero.style.transition = "background-image 1s linear";
     }, 4000); // Cambia cada 4 segundos
 });
-
 
 // Envio de formulario de contacto -   AGRADECIMIENTO / ERROR DE ENVIO
 

@@ -68,7 +68,7 @@ header .container {
 /* Imagen logo */
 .navbar-brand img {
     height: 50px;
-    /* ajustamos el tamaño del logo */
+    padding: 5px;
 }
 
 /* Menú links */
@@ -126,6 +126,8 @@ header .container {
     display: flex;
     flex-direction: column;
 }
+
+
 
 /* Contenido centrado */
 .hero-content {
@@ -252,6 +254,7 @@ section {
     /* Espaciado interno */
     font-size: 1rem;
     /* Tamaño del texto */
+    
 
 }
 
@@ -342,6 +345,10 @@ section {
     height: 80px;
 }
 
+.h4-servicios {
+    font-weight: 400;
+}
+
 .servicios {
     background-color: #fff;
     /* Fondo blanco */
@@ -417,9 +424,10 @@ section {
 
 .servicios-div h4 {
     font-size: 1.2rem;
+    color: #4E4E4E;
     /* Tamaño del texto */
     text-align: center;
-    font-weight: 400;
+    font-weight: 600;
 }
 
 /******* PRODCUTOS ********/
@@ -659,7 +667,7 @@ section {
 
 
 footer {
-    background-color: #363e50;
+    background-color: #4E4E4E;
     padding: 0px 50px;
 }
 
@@ -667,7 +675,7 @@ footer p {
     font-size: 1rem;
     color: #fff;
     margin-bottom: 0px;
-    padding: 75px 0px;
+    padding: 30px;
 }
 
 footer a {
@@ -682,6 +690,8 @@ footer a:hover {
 .footer-section {
     display: flex;
     align-items: center;
+    justify-content: flex-start;
+
 }
 
 .footer-section2{
@@ -693,10 +703,9 @@ footer a:hover {
 }
 
 .logo-footer {
-    width: 150px;
-    padding: 0;
+    width: 60px;
     background-color: #32AFC8;
-    height: auto;
+    height: auto
 }
 
 
@@ -731,6 +740,12 @@ footer a:hover {
         background-color: #ffffff;
         /* Ya es específico, no necesita !important */
     }
+
+    /* Imagen logo */
+    .navbar-brand img {
+        height: 40px;
+        padding: 5px;
+}
 
     .header-btns {
         display: flex;
@@ -798,8 +813,7 @@ footer a:hover {
         /* Cambiado a columna para apilar en móviles */
         justify-content: flex-start;
         /* Alineación al inicio */
-        align-items: stretch;
-        /* Estirar items para que ocupen el ancho completo */
+        
         gap: 20px;
         flex-wrap: nowrap;
         /* Evitar el envoltorio en columnas */
@@ -832,6 +846,7 @@ footer a:hover {
 
     .servicios-div {
         background-color: #f4f4f4;
+        width: 100%;
         height: auto;
         /* Ajustado a auto para contenido dinámico */
         display: flex;
@@ -840,7 +855,8 @@ footer a:hover {
         align-items: center;
         gap: 25px;
         padding: 20px;
-        /* Añadido padding para mejor espaciado en móviles */
+        
+       
     }
 
     .servicios-div h4 {
@@ -936,7 +952,7 @@ footer a:hover {
 
    
     #contact-us {
-        padding-bottom: 60px;
+        padding-bottom: 30px;
     }
     
     .contact-img img {
@@ -967,14 +983,40 @@ footer a:hover {
         height: 80px;
         padding: 10px;
     }
+
+    .logo-footer {
+        width: 100%;
+        background-color: #32AFC8;
+        height: auto;
+        padding: 0px;
+    }
+
+
+    .footer-section2 img {
+        height: 30px;
+        padding: 5px;
+        
+    }
 }
     
 
 
 
-@media (max-width: 1024px) {
+@media (min-width: 769px) and (max-width: 1024px) {
+     .servicios-med {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: row;
+        /* Cambiado a columna para apilar en móviles */
+        justify-content: center;
+        /* Alineación al inicio */
+        gap: 20px;
+     }
+    
+    
     .servicios-div {
-        width: auto;
+        
         min-width: 150px;
     }
 
@@ -985,5 +1027,23 @@ footer a:hover {
     .container-rigth-texto {
         height: auto;
     }
-}
 
+     /***** FOOTER *****/
+
+    footer {
+        padding: 0px;
+    }
+    footer p{
+        padding: 15px;
+    }
+
+    .footer-section2 {
+        width: 100%;
+       
+    }
+    
+    .footer-section2 img {
+        height: 80px;
+        padding: 10px;
+    }
+}
