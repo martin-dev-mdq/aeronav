@@ -79,11 +79,21 @@ document.addEventListener("DOMContentLoaded", function () {
     ];
     let indice = 0;
 
+    // Precarga las imágenes
+    imagenes.forEach(src => {
+        const img = new Image();
+        img.src = src;
+    });
+
+    // Inicializa con la primera imagen
+    hero.style.backgroundImage = `url('${imagenes[indice]}')`;
+
     setInterval(() => {
         indice = (indice + 1) % imagenes.length;
         hero.style.backgroundImage = `url('${imagenes[indice]}')`;
-        hero.style.transition = "background-image 1s linear";
-    }, 4000); // Cambia cada 4 segundos
+        // Elimina la transición si no quieres efecto
+        hero.style.transition = "linear 1s";
+    }, 4000);
 });
 
 // Envio de formulario de contacto -   AGRADECIMIENTO / ERROR DE ENVIO
